@@ -1,3 +1,6 @@
+// 20 December 2014
+// flippedpython
+
 int rows = 20; // change rows
 int columns = 40;  // change columns
 int diameter = 10; // change cell diameter
