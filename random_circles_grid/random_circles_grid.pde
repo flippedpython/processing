@@ -2,14 +2,14 @@ int rows = 20; // change rows
 int columns = 40;  // change columns
 int diameter = 10; // change cell diameter
 int cellGap = 2; // used to create a gap between each circle and the edge of the window
-int w;
-int h;
+int w; // window width
+int h; // window height
 
 void setup()
 {
   // setup frame dimensions
-  w = columns*(diameter+cellGap*2)+cellGap*2;
-  h = rows*(diameter+cellGap*2)+cellGap*2;
+  w = cellGap + columns*(diameter + cellGap*2) + cellGap;
+  h = cellGap + rows*(diameter + cellGap*2) + cellGap;
   size(w, h);
   
   noStroke();
@@ -28,9 +28,9 @@ void draw()
   {
     for (int column = 0; column < columns; column++)
     {
-      fill(0,0,80+random(100),random(255)); // shades of blue
+      fill(0, 0, 80 + random(100), random(255)); // shades of blue
       // fill(random(255), random(255), random(255)); // shades of red, green and blue, no transparency
-      ellipse(cellGap*2+column*(diameter+cellGap*2), cellGap*2+row*(diameter+cellGap*2), diameter, diameter);
+      ellipse(cellGap*2 + column*(diameter + cellGap*2), cellGap*2 + row*(diameter + cellGap*2), diameter, diameter);
     }
   }
   
