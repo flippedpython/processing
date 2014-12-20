@@ -1,26 +1,28 @@
 int rows = 20; // change rows
 int columns = 40;  // change columns
 int diameter = 10; // change cell diameter
-int cellGap = 2;
+int cellGap = 2; // used to create a gap between each circle and the edge of the window
 int w;
 int h;
 
 void setup()
 {
+  // setup frame dimensions
   w = columns*(diameter+cellGap*2)+cellGap*2;
   h = rows*(diameter+cellGap*2)+cellGap*2;
   size(w, h);
-  background(#cccccc);
+  
   noStroke();
-  ellipseMode(CORNER);
+  ellipseMode(CORNER); // set ellipse to top left corner
+  
   // change the frame rate to a value between 1 and 60
   frameRate(1);
 }
 
 void draw()
 {
+  // background white
   background(#ffffff);
-  fill(255,255,255);
   
   for (int row = 0; row < rows; row++)
   {
