@@ -1,9 +1,9 @@
 // 20 December 2014
 // flippedpython
 
-int rows = 20; // change rows
-int columns = 40;  // change columns
-int diameter = 10; // change cell diameter
+int rows = 10; // change rows
+int columns = 25;  // change columns
+int diameter = 30; // change cell diameter
 int cellGap = 2; // used to create a gap between each circle and the edge of the window
 int w; // window width
 int h; // window height
@@ -14,7 +14,8 @@ void setup()
   w = cellGap + columns*(diameter + cellGap*2) + cellGap;
   h = cellGap + rows*(diameter + cellGap*2) + cellGap;
   size(w, h);
-  
+  // set title bar
+  frame.setTitle(str(rows) + " rows, " + str(columns) + " columns, diameter " + str(diameter) + " pixels");
   noStroke();
   ellipseMode(CORNER); // set ellipse to top left corner
   
