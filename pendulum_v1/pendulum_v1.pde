@@ -1,5 +1,5 @@
 // pendulum version 1
-// ddecember 2014
+// december 2014
 // https://github.com/flippedpython/processing
 
 int screenWidth = 440;
@@ -18,7 +18,8 @@ float fRate = 30;
 float newX = 0;
 float newY = 0;
 
-void setup(){
+void setup()
+{
 
   // light grey background
   background(#ffffff);
